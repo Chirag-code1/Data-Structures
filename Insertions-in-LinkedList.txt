@@ -1,0 +1,140 @@
+ 
+//Question: To insert a node at start, end, and at a particular position in Linked List using C.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node{
+    int info;
+    struct node *link;
+};
+
+struct node *Start=NULL;
+
+struct node *createNode(){
+    struct node *n;
+    n=(struct node*)malloc(sizeof(struct node *));
+    return n;
+}
+
+
+void insertAtStart(){
+    struct node *temp;
+    temp=createNode();
+    printf("\nEnter the info at Start:\t");
+    scanf("%d",&temp->info);
+    
+    if(Start==NULL){
+     Start=temp;
+    }
+    else{
+     temp->link=Start;
+     Start=temp;
+     }
+    
+}
+
+void insertAtPos(){
+    int pos;
+    struct node *temp;
+    temp=createNode();
+    printf("\nEnter info in your node:\t");
+    scanf("%d",&temp->info);
+    printf("\nEnter the POSITION at which you wants to add Node.\t");
+    scanf("%d",&pos);
+    
+    if(Start==NULL){
+        Start=temp;
+    }
+    else{
+    struct node *i;
+    i=Start;
+    int k;
+    for(k=1;k<pos-1;k++){
+    i=i->link;
+}
+    temp->link=i->link;
+    i->link=temp;
+    }
+}
+
+void insertAtEnd(){
+    struct node *temp;
+    temp=createNode();
+    printf("Enter the information in your node:\t");
+    scanf("%d",&temp->info);
+    
+    temp->link=NULL;
+    
+    if(Start==NULL){
+        Start=temp;
+    }
+    else{
+        struct node *t;
+        t=Start;
+        while(t->link!=NULL){
+            t=t->link;
+        }
+        t->link=temp;
+    }
+}
+
+
+void viewList(){
+    if(Start==NULL){
+        printf("LIST IS EMPTY !!\n\n");
+    }
+    else{
+        struct node *view;
+        view=Start;
+        while(view!=NULL){
+            printf("%d  ",view->info);
+            view=view->link;
+        }
+    }
+}
+
+int menu(){
+    int ch;
+    printf("\n1.Insert node at START");
+    printf("\n2.Insert node at POSITION");
+    printf("\n3.Insert node at END");
+    
+    printf("\n4.View List");
+    printf("\n5.Exit");
+    printf("\nEnter your Choice:\t");
+    scanf("%d",&ch);
+    return ch;
+}
+
+int main(){
+    while(1){
+        switch(menu()){
+            
+            case 1:
+            insertAtStart();
+            break;
+            
+            case 2:
+            insertAtPos();
+            break;
+            
+            case 3:
+            insertAtEnd();
+            break;
+            
+            case 4:
+            viewList();
+            break;
+            
+            case 5:
+            exit(1);
+            break;
+            
+            default:
+            printf("\n\nINVALID CHOICE");
+        }
+    }
+    
+    return 0;
+}	 
