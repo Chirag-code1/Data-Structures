@@ -1,4 +1,4 @@
-//Combine two linked list using C:
+//Combine two linked list using C;
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -93,6 +93,5 @@ int main() {
    
    printf("Combined List :\n");
    display(list);
-   
    return 0;
 }
