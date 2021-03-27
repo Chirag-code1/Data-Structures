@@ -59,5 +59,6 @@ int main() {
     }
     printMiddle(&head);
     printList(head);
+
 	return 0;
 }
