@@ -1,5 +1,4 @@
- 
-//Question: To insert a node at start, end, and at a particular position in Linked List using C.
+ //Question: To insert a node at start, end, and at a particular position in Linked List using C.
 
 #include <stdio.h>
 #include <stdlib.h>
