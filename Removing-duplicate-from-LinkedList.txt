@@ -1,5 +1,4 @@
 //Remove duplicates
-
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct node												// structure of linked list
