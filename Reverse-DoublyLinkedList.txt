@@ -1,4 +1,3 @@
-
 //Doubly Linked List : Create and display a doubly linked list in reverse order using C
 
 #include <stdio.h>
