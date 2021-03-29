@@ -26,7 +26,7 @@ struct node *list = NULL;
 void insert(int data) 
 {
   
- // Allocate memory for new node;
+ // Allocate memory for new node:
 
    struct node *link = (struct node*) malloc(sizeof(struct node));
  
