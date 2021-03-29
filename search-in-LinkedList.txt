@@ -1,4 +1,4 @@
-//SEarch an element in LinkedList using c.
+//Search an element in LinkedList using c.
 
 
 #include<stdio.h> 
